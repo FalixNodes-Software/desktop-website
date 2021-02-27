@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FalixNodes Software</title>
+        <link rel="stylesheet" href="./src/css/style.css">
+        <script src="https://kit.fontawesome.com/db4a23598f.js"></script>
+        <script src="./src/js/os-detection.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="FalixNodes Software">
+        <meta name="og:image" content="https://software.falixnodes.net/new/src/images/preview/software-only.png"/>
+        <meta name="description" content="Accessing FalixNodes, all from one place!">
+        <meta name="copyright"content="FalixNodes Limited">
+    </head>
+    <body>
+        <div class="top_container">
+            <div class="tc_content">
+                <div class="tc_content">
+                    <h1>FalixNodes Software</h1>
+                    <p>Accessing FalixNodes, all from one place</p>
+                    <a id="download" style="padding: 0px; background: transparent;" data-for-os="windows" href="#"><img width="160" src="https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png"></a>
+                    <a id="download" data-for-os="mac" href="#">Download for macOS</a>
+                    <a id="download_linux" href="#"><img src="./src/images/store/snapcraft.png"></a><button id="dd" onclick="dropDown();">Other options</button>
+                </div>
+                <div class="preview_main">
+                    <img data-for-os="windows" src="./src/images/preview/windows.png">
+                    <img data-for-os="mac" style="width: 420px;" src="./src/images/preview/mac.png">
+                    <img id="linux_os" src="./src/images/preview/linux.png">
+                    <div style="display: none;" id="drop_content">
+                        <p>Only Snap provides auto updates</p>
+                        <i class="fab fa-ubuntu"></i><a id="ubuntu" href="#">Ubuntu</a>
+                        <i class="fab fa-fedora"></i><a id="fedora" href="#">Fedora</a>
+                        <i class="fab fa-linux"></i><a id="arch" href="#">Arch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="etc_container">
+            <div class="ec_content">
+                <div class="card_full">
+                    <h1 id="mh_1">News</h1>
+                    <p>Read about new updates and more</p>
+                    <a id="m_1" href="https://software.falixnodes.net/posts/"><img src="./src/images/cards/news.png"></a>
+                </div>
+                <div class="card_full">
+                    <h1 id="mh_2">Need Help?</h1>
+                    <p>View information about the software in the help center</p>
+                    <a id="m_2" href="https://help.falixnodes.net/"><img src="./src/images/cards/help-center.png"></a>
+                </div>
+                <div class="card_full">
+                    <h1 id="mh_3">FalixCoins</h1>
+                    <p>Earn coins on mobile by watching ads on Android or iOS</p>
+                    <a id="m_3" href="https://app.falixnodes.net/"><img src="./src/images/cards/mobile-app.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fc_content">
+                <div class="left">
+                    <p>© 2018 - 2020 FalixNodes Limited / Korbs Studio</p>
+                </div>
+                <div class="right">
+                    <p><a href="https://github.com/FalixNodes-Software/Desktop-App/" target="_blank"><i class="fab fa-github"></i></a> | <a href="https://discord.gg/falixnodes" target="_blank"><i class="fab fa-discord"></i></a> <a href="https://twitter.com/falixnodes" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://instagram.com/falixnodes" target="_blank"><i class="fab fa-instagram"></i></a> <a href="https://facebook.com/falixnodes/" target="_blank"><i class="fab fa-facebook"></i></a></p>
+                </div>
+            </div>
+        </div>
+        <a id="spacer-bottom"></a>
+    </body>
+</html>
+<script>
+if (/\blinux\b/i.test(navigator.userAgent)) {
+    document.body.className += " linux";
+}
+</script>
+<script>
+function dropDown() {
+  var x = document.getElementById("drop_content");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
